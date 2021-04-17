@@ -1,0 +1,29 @@
+﻿<Window x:Class="LCRApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LCRApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Text="{Binding user1}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="{Binding background1}" Margin="328,236,312,143"/>
+        <TextBox Text="{Binding user2}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="{Binding background2}" Margin="47,199,593,180"/>
+        <TextBox Text="{Binding user3}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="{Binding background3}" Margin="328,104,312,275"/>
+        <TextBox Text="{Binding user4}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="{Binding background4}" Margin="576,199,64,180"/>
+
+        <TextBox Text="{Binding Dice1}" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Background="LightPink" Margin="305,356,434,23" RenderTransformOrigin="2.129,0.696"/>
+        <TextBox Text="{Binding Dice2}" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Background="LightPink" Margin="378,355,361,24" RenderTransformOrigin="2.129,0.696"/>
+        <TextBox Text="{Binding Dice3}" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Background="LightPink" Margin="458,355,281,24" RenderTransformOrigin="2.129,0.696"/>
+
+        <TextBox Text="{Binding Chip1}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightPink" Margin="378,279,361,100" RenderTransformOrigin="1.196,0.577"/>
+        <TextBox Text="{Binding Chip2}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightPink" Margin="94,154,645,225" RenderTransformOrigin="1.196,0.577"/>
+        <TextBox Text="{Binding Chip3}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightPink" Margin="378,62,361,317" RenderTransformOrigin="1.196,0.577"/>
+        <TextBox Text="{Binding Chip4}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightPink" Margin="623,152,116,227" RenderTransformOrigin="1.196,0.577"/>
+
+        <Button Command="{Binding Path=diceRollCommand}" IsEnabled="{Binding isEnable}" Content="Dice Roll" Margin="27,356,593,28"/>
+        <TextBox Text="{Binding CenterChip}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightPink" Margin="378,167,361,212"/>
+        <TextBox Text="{Binding winner}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Height="40" Background="LightGreen" Margin="548,10,17,369"/>
+        <Button Command="{Binding ResetCommand}"  Content="Reset" Margin="27,16,593,368"/>
+    </Grid>
+</Window>
